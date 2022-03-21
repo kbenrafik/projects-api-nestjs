@@ -29,45 +29,53 @@
 ## Installation
 
 ```bash
-$ npm install
+$ nvm install && nvm uuse
+$ yarn install
 ```
 
 ## Running the app
 
 ```bash
 # development
-$ npm run start
+$ yarn run start
 
 # watch mode
-$ npm run start:dev
+$ yarn run start:dev
 
 # production mode
-$ npm run start:prod
+$ yarn run start:prod
 ```
 
 ## Test
 
 ```bash
 # unit tests
-$ npm run test
+$ yarn run test
 
 # e2e tests
-$ npm run test:e2e
+$ yarn run test:e2e
 
 # test coverage
-$ npm run test:cov
+$ yarn run test:cov
 ```
 
-## Support
+## How to check the API
+- check the code in vscode online: https://codesandbox.io/s/serene-hamilton-d9i75z
+- Swagger: https://d9i75z.sse.codesandbox.io/api
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+You can fetch the data from the api in 2 ways:
+- Anonymous 
+- Authenticated (using jwt)
 
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
+To authenticate you should use the end point `/auth/login`, you can try with the payload:
+```
+{
+  "username": "khalid"
+}
+```
+```
+{
+  "username": "ben"
+}
+```
+After getting the jwt, you should copy and past on the lock icon to fetch the data with authentication
